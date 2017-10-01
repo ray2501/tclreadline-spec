@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog
 %{directory}/%{_lib}/tcl/libtclreadline-2.2.0.so
 %{directory}/%{_lib}/tcl/libtclreadline.so
-%{directory}/%{_lib}/tcl/%{name}%{version}/*.tcl
+%{directory}/%{_lib}/tcl/%{name}%{version}
 %{_mandir}/mann/*.n*
 
 %files devel
