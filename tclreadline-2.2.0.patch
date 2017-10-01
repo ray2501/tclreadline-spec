@@ -1,0 +1,20 @@
+--- configure.ac.orig	2016-12-21 07:02:41.000000000 +0800
++++ configure.ac	2017-10-02 00:23:24.825316208 +0800
+@@ -56,7 +56,7 @@
+ 
+ AC_MSG_CHECKING([which tclConfig.sh to use])
+ TCL_LIB_DIR=""
+-for dir in $tcl_search /usr/lib /usr/local/lib $exec_prefix/lib /usr/local/lib/unix /opt/tcl/lib; do
++for dir in $tcl_search $libdir /usr/local/lib $exec_prefix/lib /usr/local/lib/unix /opt/tcl/lib; do
+     if test -r $dir/tclConfig.sh; then
+         TCL_LIB_DIR=$dir
+         break
+@@ -88,7 +88,7 @@
+ if test "${prefix}" = "NONE"; then
+     prefix=$TCL_PREFIX
+ fi
+-TCLRL_LIBDIR="${prefix}/lib"
++TCLRL_LIBDIR="${libdir}"
+ AC_SUBST(TCLRL_LIBDIR)
+ TCLRL_DIR="${TCLRL_LIBDIR}/tclreadline$VERSION"
+ AC_SUBST(TCLRL_DIR)
