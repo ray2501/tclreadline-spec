@@ -2,7 +2,7 @@
 
 Summary:	Readline Tcl extension
 Name:		tclreadline
-Version:	2.2.0
+Version:	2.3.0
 Release:	1
 License:	BSD
 Group:		Development/Languages/Tcl
@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%{directory}/%{_lib}/tcl/libtclreadline-2.2.0.so
+%{directory}/%{_lib}/tcl/libtclreadline-%{version}.so
 %{directory}/%{_lib}/tcl/libtclreadline.so
 %{directory}/%{_lib}/tcl/%{name}%{version}
 %{_mandir}/mann/*.n*

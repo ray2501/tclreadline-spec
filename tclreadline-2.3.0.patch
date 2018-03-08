@@ -1,5 +1,14 @@
---- configure.ac.orig	2016-12-21 07:02:41.000000000 +0800
-+++ configure.ac	2017-10-02 00:23:24.825316208 +0800
+--- configure.ac.orig   2018-03-08 08:16:56.440822434 +0800
++++ configure.ac        2018-03-08 08:17:05.560833966 +0800
+@@ -15,7 +15,7 @@
+ AC_CONFIG_AUX_DIR(./aux)
+ 
+ MAJOR=2
+-MINOR=2
++MINOR=3
+ PATCHLEVEL=0
+ VERSION=$MAJOR.$MINOR
+ PATCHLEVEL_STR=$VERSION.$PATCHLEVEL
 @@ -56,7 +56,7 @@
  
  AC_MSG_CHECKING([which tclConfig.sh to use])
