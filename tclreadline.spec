@@ -14,6 +14,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	readline-devel
 BuildRequires:	tcl-devel >= 8.5
+BuildRequires:	tk-devel >= 8.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
