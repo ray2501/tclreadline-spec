@@ -1,14 +1,14 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "tclreadline-2.3.6"
+set base "tclreadline-2.3.7"
 
 set var2 [list git clone https://github.com/flightaware/tclreadline.git $base]
 exec >@stdout 2>@stderr {*}$var2
 
 cd $base
 
-set var2 [list git checkout 8c0e99aec448517bf4b5020de203eba34f5219a8]
+set var2 [list git checkout 98c6af75211f0b084bc65f66e0206bc021f492b2]
 exec >@stdout 2>@stderr {*}$var2
 
 set var2 [list git reset --hard]
@@ -27,7 +27,7 @@ if {[file exists build]} {
 
 file mkdir build/BUILD build/RPMS build/SOURCES build/SPECS build/SRPMS
 file copy -force $base.tar.gz build/SOURCES
-file copy -force tclreadline-2.3.6.patch build/SOURCES
+file copy -force tclreadline-2.3.7.patch build/SOURCES
 
 set buildit [list rpmbuild --target $arch --define "_topdir [pwd]/build" -bb tclreadline.spec]
 exec >@stdout 2>@stderr {*}$buildit

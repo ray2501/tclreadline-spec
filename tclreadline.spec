@@ -2,7 +2,7 @@
 
 Summary:	Readline Tcl extension
 Name:		tclreadline
-Version:	2.3.6
+Version:	2.3.7
 Release:	1
 License:	BSD
 Group:		Development/Languages/Tcl
@@ -51,7 +51,7 @@ rm -f config/missing
 %{__automake} --add-missing
 %configure --with-tcl=/usr/lib64 --prefix=%{directory} \
 	   --exec-prefix=%{directory} \
-           --libdir=%{directory}/%{_lib}/tcl
+           --libdir=%{directory}/%{_lib}/tcl --enable-tclstub
 
 %{__make}
 
