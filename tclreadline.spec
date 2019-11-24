@@ -2,7 +2,7 @@
 
 Summary:	Readline Tcl extension
 Name:		tclreadline
-Version:	2.3.7
+Version:	2.3.8
 Release:	1
 License:	BSD
 Group:		Development/Languages/Tcl
