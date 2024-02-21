@@ -45,10 +45,10 @@ Readline Tcl extension developement files.
 
 %build
 rm -f config/missing
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake} --add-missing
+libtoolize
+aclocal
+autoconf
+automake --add-missing
 %configure --with-tcl=/usr/lib64 --prefix=%{directory} \
 	   --exec-prefix=%{directory} \
            --libdir=%{directory}/%{_lib}/tcl --enable-tclstub
