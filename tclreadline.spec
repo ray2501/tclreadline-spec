@@ -41,7 +41,7 @@ Readline Tcl extension developement files.
 
 %prep
 %setup -q
-%patch0
+%patch 0
 
 %build
 rm -f config/missing
