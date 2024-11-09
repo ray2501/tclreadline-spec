@@ -1,14 +1,14 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "tclreadline-2.3.8"
+set base "tclreadline-2.4.0"
 
 set var2 [list git clone https://github.com/flightaware/tclreadline.git $base]
 exec >@stdout 2>@stderr {*}$var2
 
 cd $base
 
-set var2 [list git checkout cfd5080c6433fd61bbcf54f1552eb0723f9a8154]
+set var2 [list git checkout 4acf2ad2c5f00ab138113da412a3c02b7f05d15f]
 exec >@stdout 2>@stderr {*}$var2
 
 set var2 [list git reset --hard]
